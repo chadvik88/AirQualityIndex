@@ -2,8 +2,6 @@
 
 This project focuses on predicting **PM2.5 concentrations** using a combination of classical machine learning models, deep learning architectures (like LSTM), and an advanced Denoising Diffusion Probabilistic Model (DDPM). The goal is to build a cutting-edge forecasting system that leverages the strengths of generative modeling and multivariate time-series engineering.
 
----
-
 ## Project Overview
 
 - Forecasting air pollution, especially PM2.5, is critical for public health, urban planning, and climate research.
@@ -15,7 +13,14 @@ This project focuses on predicting **PM2.5 concentrations** using a combination 
   - Designing and implementing a custom DDPM to model time series in a novel way
 - Visual comparisons and performance benchmarks reveal strengths and limitations across models.
 
----
+## Screenshots of Highlights
+
+<p align="center">
+  <img src="images/Screenshot 2026-01-02 103527.png" width="450"/>
+  <img src="images/Screenshot 2026-01-02 103541.png" width="450"/>
+  <img src="images/Screenshot 2026-01-02 103559.png" width="450"/>
+  <img src="images/Screenshot 2026-01-02 103615.png" width="450"/>
+</p>
 
 ## Highlights
 
@@ -24,8 +29,6 @@ This project focuses on predicting **PM2.5 concentrations** using a combination 
 - ML Benchmarking (XGBoost, RF, LSTM)  
 - Feature-Rich Lag Analysis  
 - Clean Modular Codebase  
-
----
 
 ## Project Structure
 
@@ -42,8 +45,6 @@ air-quality-diffusion/
 └── README.md # Project documentation
 ```
 
----
-
 ## Notebooks Overview
 
 ### 01_explore_clean_data.ipynb
@@ -52,8 +53,6 @@ air-quality-diffusion/
 - Handles missing values, interpolation, and scaling  
 - Concatenates multivariate air quality features across sensors  
 **Output:** `scaled_data.csv`
-
----
 
 ### 02_feature_engineering.ipynb
 
@@ -71,16 +70,12 @@ air-quality-diffusion/
 - Prepares compressed input features for use in downstream models (e.g., LSTM, XGBoost, Diffusion)
 **Output:** Reduced-dimension dataset and PCA transformation object
 
----
-
 ### 03_lstm_model.ipynb
 
 - Prepares sequential windows for LSTM training  
 - Trains an LSTM model for PM2.5 forecasting  
 - Plots predictions and error curves  
 **Output:** RMSE, R², and predicted vs true PM2.5 plots
-
----
 
 ### 04_diffusion_modeling.ipynb
 
@@ -89,8 +84,6 @@ air-quality-diffusion/
 - Forecasts via iterative reverse sampling  
 - Benchmarks model predictions against ground truth  
 **Output:** DDPM performance metrics and forecast visualizations
-
----
 
 ### 05_baseline_models.ipynb
 
@@ -102,8 +95,6 @@ air-quality-diffusion/
   - DDPM  
 **Output:** Final RMSE, R², and model performance comparison
 
----
-
 ## Tech Stack
 
 - Python 3.10+  
@@ -112,16 +103,12 @@ air-quality-diffusion/
 - Scikit-learn – Baseline metrics and preprocessing  
 - Pandas / NumPy / Matplotlib – Data wrangling and visualization  
 
----
-
 ## How the Diffusion Model Works
 
 - The DDPM is inspired by generative models like DALL·E and Stable Diffusion but adapted for 1D regression.
 - Instead of generating images, it learns to reverse noise applied to PM2.5 time series.
 - Sampling starts with Gaussian noise and refines over 100+ steps using learned denoising logic.
 - The model forecasts future values by iteratively cleaning noisy sequences.
-
----
 
 ## Future Improvements
 
@@ -130,5 +117,3 @@ air-quality-diffusion/
 - Explore multi-step forecasting (not just one time step ahead)  
 - Integrate weather and environmental features (e.g., temperature, humidity)  
 - Deploy as a web app using Streamlit or Flask  
-
----
