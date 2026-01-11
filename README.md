@@ -18,7 +18,7 @@ This project focuses on predicting **PM2.5 concentrations** using a combination 
 <p align="center">
   <img src="models/images/Screenshot 2026-01-02 103527.png" width="450"/>
   <img src="models/images/Screenshot 2026-01-02 103541.png" width="450"/>
-  <img src="modelsimages/Screenshot 2026-01-02 103559.png" width="450"/>
+  <img src="models/images/Screenshot 2026-01-02 103559.png" width="450"/>
   <img src="models/images/Screenshot 2026-01-02 103615.png" width="450"/>
 </p>
 
